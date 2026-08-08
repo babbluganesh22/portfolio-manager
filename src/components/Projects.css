@@ -1,0 +1,8 @@
+.section-heading{
+  font-size:1.6rem;
+  margin-bottom:22px;
+}
+.project-grid{
+  display:grid;
+  gap:18px;
+}
