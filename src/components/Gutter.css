@@ -1,0 +1,16 @@
+.gutter{
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: #3A3E6E;
+  text-align:right;
+  padding: 40px 14px 40px 0;
+  user-select:none;
+  line-height: 1.9;
+  min-width: 44px;
+  border-right: 1px solid var(--line);
+  background: var(--bg-deep);
+}
+
+@media (max-width: 640px){
+  .gutter{ min-width:32px; padding: 28px 8px 28px 0; font-size:11px; }
+}
