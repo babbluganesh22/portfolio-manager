@@ -1,0 +1,36 @@
+.editor{
+  max-width: 1080px;
+  margin: 32px auto;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px -30px rgba(0,0,0,0.6);
+}
+
+.titlebar{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding: 12px 18px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.dots{ display:flex; gap:8px; }
+.dot{ width:11px; height:11px; border-radius:50%; }
+.dot.red{ background:var(--red); }
+.dot.gold{ background:var(--gold); }
+.dot.green{ background:var(--green); }
+
+.titlebar-label{
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin: 0 auto;
+}
+
+@media (max-width: 640px){
+  .editor{ margin: 14px; border-radius:10px; }
+  .titlebar-label{ display:none; }
+}
