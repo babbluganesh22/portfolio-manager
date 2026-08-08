@@ -1,28 +1,31 @@
+// src/components/Gutter.jsx
 import { useEffect, useRef, useState } from 'react'
 import './Gutter.css'
 
 function Gutter({ contentRef }) {
   const [lineCount, setLineCount] = useState(0)
-  const LINE_HEIGHT = 22 // approx px per line, matches body line-height
+  const gutterRef = useRef(null)
 
   useEffect(() => {
-    const el = contentRef.current
-    if (!el) return
+    const contentEl = contentRef.current
+    const gutterEl = gutterRef.current
+    if (!contentEl || !gutterEl) return
 
     const updateLineCount = () => {
-      setLineCount(Math.ceil(el.offsetHeight / LINE_HEIGHT))
+      const lineHeight = parseFloat(getComputedStyle(gutterEl).lineHeight)
+      setLineCount(Math.ceil(contentEl.offsetHeight / lineHeight))
     }
 
     updateLineCount()
 
     const resizeObserver = new ResizeObserver(updateLineCount)
-    resizeObserver.observe(el)
+    resizeObserver.observe(contentEl)
 
     return () => resizeObserver.disconnect()
   }, [contentRef])
 
   return (
-    <div className="gutter">
+    <div className="gutter" ref={gutterRef}>
       {Array.from({ length: lineCount }, (_, i) => (
         <div key={i}>{i + 1}</div>
       ))}

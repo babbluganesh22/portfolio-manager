@@ -1,0 +1,49 @@
+.imports{
+  font-family: var(--font-mono);
+  font-size: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin-bottom: 28px;
+  overflow-x:auto;
+}
+.imports div{ white-space:nowrap; }
+
+.about-text{
+  max-width: 640px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+.about-text strong{ color: var(--text); font-weight:600; }
+
+.skill-groups{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.skill-card{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+.skill-card h4{
+  font-family: var(--font-mono);
+  font-size:12.5px;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  margin-bottom:12px;
+}
+.pill-row{ display:flex; flex-wrap:wrap; gap:8px; }
+.pill{
+  font-family: var(--font-mono);
+  font-size:12.5px;
+  padding: 5px 11px;
+  border-radius:6px;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
