@@ -1,4 +1,4 @@
-import { contactInfo } from '../data/contact'
+import { contactInfo } from '../data/Contact'
 import './Contact.css'
 
 function Contact() {
